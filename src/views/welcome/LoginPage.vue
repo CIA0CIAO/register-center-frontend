@@ -2,7 +2,7 @@
     <div style="text-align: center;margin: 0 20px">
         <div style="margin-top: 150px" >
             <div style="font-size: 36px;font-weight: bold">
-                <img src="@/assets/logo.gif" alt="logo" style="height: 50px;margin-right: 8px;"/>ニコニコ
+                <img src="../../assets/logo.gif" alt="logo" style="height: 50px;margin-right: 8px;"/>ニコニコ
             </div>
             <div style="font-size: 14px;color: grey">为美好的世界献上祝福(゜-゜)つロ干杯~</div>
         </div>
@@ -12,7 +12,7 @@
                     <el-icon><User /></el-icon>
                 </template>
             </el-input>
-            <el-input v-model="form.password" type="password" style="margin-top: 10px" placeholder="密码" @blur="isFocused = false" @focus="isFocused = true">
+            <el-input v-model="form.password" show-password type="password" style="margin-top: 10px" placeholder="密码" @blur="isFocused = false" @focus="isFocused = true">
                 <template #prefix>
                     <el-icon><Lock /></el-icon>
                 </template>
@@ -45,7 +45,7 @@
 import {User, Lock} from '@element-plus/icons-vue'
 import {reactive} from "vue";
 import {ElMessage} from "element-plus";
-import {get, post} from "@/net";
+import {currentUser, get, post} from "@/net";
 import router from "@/router";
 import {useStore} from "@/stores";
 import { ref, computed } from 'vue';
@@ -68,12 +68,7 @@ const login = () => {
             remember: form.remember
         }, (message) => {
             ElMessage.success(message)
-            get('/api/user/currentUser', (message) => {
-                store.auth.user = message
-                router.push('/index')
-            }, () => {
-                store.auth.user = null
-            })
+            currentUser(true)
         })
     }
 }
