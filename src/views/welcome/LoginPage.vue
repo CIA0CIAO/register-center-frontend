@@ -49,6 +49,7 @@ import {currentUser, get, post} from "@/net";
 import router from "@/router";
 import {useStore} from "@/stores";
 import { ref, computed } from 'vue';
+import axios from "axios";
 
 const store = useStore()
 
@@ -74,8 +75,8 @@ const login = () => {
 }
 const iconSrc = computed(() => {
     return isFocused.value
-        ? 'https://s2.loli.net/2023/06/15/jZiVS1qCgz8RGob.png'
-        : 'https://s2.loli.net/2023/06/12/JGLZ2tEjUn1zfK6.png';
+        ? 'https://s2.loli.net/2023/07/17/R3YxaTlVqX9uwpo.png'
+        : 'https://s2.loli.net/2023/07/17/TVk7Ev8Ow4hIZ5c.png';
 });
 </script>
 

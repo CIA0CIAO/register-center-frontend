@@ -17,7 +17,7 @@
             <div class="user-card" style="margin: 35px 0 0 30px">
                 <div style="text-align: right;padding: 5px 15px 0 15px">
                     <el-avatar :size="70"
-                               src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+                               src="https://s2.loli.net/2023/07/17/yzHcQr6eGaoNYlK.jpg"></el-avatar>
                     <div style="font-weight: bold">{{ store.auth.user?.username }}</div>
                 </div>
             </div>

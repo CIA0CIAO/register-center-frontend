@@ -1,7 +1,7 @@
 <template>
     <div style="width: 100vw;height: 100vh;overflow: hidden;display: flex">
         <div style="flex: 1">
-            <el-image style="width: 100%;height: 100%" fit="cover" src="https://s2.loli.net/2023/04/21/O4WDpJLyPAHisgm.jpg"/>
+            <el-image style="width: 100%;height: 100%" fit="cover" src="https://s2.loli.net/2023/07/16/1DiwHbRq9d5BN3V.jpg"/>
         </div>
         <div class="welcome-title">
             <div style="font-size: 30px;font-weight: bold">欢迎来到我们的学习平台</div>
@@ -10,7 +10,7 @@
         </div>
         <div style="width: 420px;background-color: white;z-index: 1">
             <router-view v-slot="{ Component }">
-                <!--      transition为跳转动效          -->
+                <!--      transition为element-plus提供的跳转动效          -->
                 <transition name="el-fade-in-linear" mode="out-in">
                     <component :is="Component" style="height: 100%"/>
                 </transition>
